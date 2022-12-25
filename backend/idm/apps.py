@@ -1,0 +1,9 @@
+from django.apps import AppConfig
+
+
+class IdmConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'idm'
+
+    def ready(self):
+        import idm.signals
